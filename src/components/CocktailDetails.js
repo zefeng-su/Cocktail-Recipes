@@ -1,7 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-function CocktailDetails({image, name, id, info, glass}) {
+function CocktailDetails(props) {
+  const {image, name, id, info, glass} = props;
+  
   return (
     <article>
       <div className="cocktail">
@@ -12,7 +14,7 @@ function CocktailDetails({image, name, id, info, glass}) {
         <h4>{glass}</h4>
         <p>{info}</p>
         <Link to = {`/cocktail/${id}`} className='btn btn-primary btn-details'>
-          Details
+          Click here for details
         </Link>
       </div>
     </article>

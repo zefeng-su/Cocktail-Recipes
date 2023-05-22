@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from "react";
 import './SearchForm.css'
 import SearchIcon from '@mui/icons-material/Search';
-import { useGlobalContext } from "./apiContext";
+import { useGlobalContext } from "../context/apiContext";
 
 
 function SearchForm(props) {
@@ -10,29 +10,28 @@ function SearchForm(props) {
   const{setSearchTerm} = useGlobalContext();
   const searchValue = useRef('');
 
-  useEffect ( ()=> {
-    searchValue.current.focus();
-  },[])
+  useEffect(()=> {
+    searchValue.current.focus()
+  }, []);
 
   const searchCocktail = () => {
-    setSearchTerm (searchValue.current.value);
-  }
+    setSearchTerm(searchValue.current.value)
+  };
 
   const handlerSubmit = (event) => {
     event.preventDefault();
-  }
+  };
 
   return (
     <div className='search-form'>
       <div className='container'>
         <div className="search-form-content">
-          <form className='search-form'>
+          <form className='search-form' onSubmit={handlerSubmit}>
             <div className='search-form-element flex flex-space-between bg-white'>
               <input 
               className='form-ctrl' 
               type={type} 
               placeholder={placeholder}
-              name="name"
               id="name"
               ref={searchValue}
               onChange={searchCocktail}

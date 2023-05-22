@@ -1,7 +1,7 @@
 import React from 'react'
 import CocktailDetails from './CocktailDetails'
 import Loader from './Loader';
-import { useGlobalContext } from './apiContext'
+import { useGlobalContext } from '../context/apiContext'
 
 function CocktailList() {
   const {cocktail, loading} = useGlobalContext();
@@ -17,7 +17,7 @@ function CocktailList() {
   return (
     <section className='section'>
       <h2 className='section-title'>
-        cocktails
+        YOUR SEARCH RESULTS
       </h2>
       <div className='cocktails-center'>
         {cocktail.map((item) => {
