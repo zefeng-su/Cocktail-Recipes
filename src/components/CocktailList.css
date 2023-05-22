@@ -40,6 +40,22 @@
     margin-bottom: 0.8rem;
 }
 
+.cocktail-item-btn {
+    background-color: var(--orange);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.cocktail-item-btn:hover {
+    background-color: var(--green);
+}
+
 @media screen and (min-width:600px){
     .cocktail-content{
         grid-template-columns: repeat(2,1fr);
@@ -57,7 +73,7 @@
 
 @media screen and (min-width:1100px){
     .cocktail-content{
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(5,1fr);
     }
     .cocktail-item-img img{
         max-width: 120px;

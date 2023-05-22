@@ -2,6 +2,7 @@ import React, {useRef, useEffect} from "react";
 import './SearchForm.css'
 import SearchIcon from '@mui/icons-material/Search';
 import { useGlobalContext } from "../context/apiContext";
+import { useNavigate } from 'react-router-dom';
 
 
 function SearchForm(props) {
@@ -9,17 +10,17 @@ function SearchForm(props) {
   const{type, placeholder} = props
   const{setSearchTerm} = useGlobalContext();
   const searchValue = useRef('');
+  const navigate = useNavigate();
 
   useEffect(()=> {
     searchValue.current.focus()
   }, []);
 
-  const searchCocktail = () => {
-    setSearchTerm(searchValue.current.value)
-  };
-
+ 
   const handlerSubmit = (event) => {
     event.preventDefault();
+    setSearchTerm(searchValue.current.value)
+    navigate('/cocktail')
   };
 
   return (
@@ -34,9 +35,8 @@ function SearchForm(props) {
               placeholder={placeholder}
               id="name"
               ref={searchValue}
-              onChange={searchCocktail}
               />
-              <button type='submit' className='flex flex-center'>
+              <button type='submit' className='flex flex-center' onClick={handlerSubmit}>
                 <SearchIcon className='text-black material-icons md-24'/> 
               </button>
             </div>

@@ -29,10 +29,10 @@ function CocktailDetails(props) {
           <span>{info}</span>
         </div>
 
-        <Link to = {`/cocktail/${id}`}>
-          <div className='cocktail-item-btn fontsize-12 fontwidth-6'>
-            Click here for details
-          </div>
+        <Link to = {`/cocktail/${id}`}> 
+          <button type="button" className='cocktail-item-btn'>
+            Details
+          </button> 
         </Link>
 
       </div>

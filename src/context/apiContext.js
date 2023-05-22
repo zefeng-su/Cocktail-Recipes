@@ -8,8 +8,7 @@ const AppProvider = ({children}) => {
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
     const [cocktail, setCocktail] = useState([]);
-    const [result, setResult] = useState('');
-
+   
     const fetchAPI = useCallback(async() => {
         setLoading(true);
         try{
@@ -23,8 +22,7 @@ const AppProvider = ({children}) => {
                     const { 
                         idDrink, 
                         strDrink, 
-                        strDrinkThumb, 
-                        strInstructions, 
+                        strDrinkThumb,  
                         strAlcoholic, 
                         strGlass 
                     } = item;

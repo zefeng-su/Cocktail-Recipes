@@ -26,13 +26,10 @@ function Navbar() {
         </div>
     
         <div className={toggleMenu ? "navbar-collapse show-navbar-collapse": "navbar-collapse"}>
-          <ul className="navbar-nav">
+          <ul className="navbar-nav">   
             <li className='nav-item'>
-              <Link to ="/" className="nav-link text-uppercase text-white fontsize-22 fontwidth-6 ls-1">Home</Link>
-            </li>      
-            <li className='nav-item'>
-            <Link to ="about" className="nav-link text-uppercase text-white fontsize-22 fontwidth-6 ls-1">About</Link>
-          </li>    
+              <Link to ="about" className="nav-link text-uppercase text-white fontsize-22 fontwidth-6 ls-1">About</Link>
+            </li>    
           </ul>
         </div>
       </div>

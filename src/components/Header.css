@@ -1,5 +1,5 @@
 .header-content {
-    min-height: 75vh;
+    min-height: 37vh;
     background: linear-gradient(rgba(0,177,79, 0.3), rgba(238,99,82, 0.5)), url(../images/bar-image.png) center/cover no-repeat;
     flex-direction: column;
 }

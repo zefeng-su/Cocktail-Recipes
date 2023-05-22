@@ -32,6 +32,10 @@ function SingleCocktail() {
               strIngredient4,
               strIngredient5,
               strIngredient6,
+              strIngredient7,
+              strIngredient8,
+              strIngredient9,
+              strIngredient10,
             } = data.drinks[0]
 
             const ingredients = [
@@ -41,6 +45,10 @@ function SingleCocktail() {
               strIngredient4,
               strIngredient5,
               strIngredient6,
+              strIngredient7,
+              strIngredient8,
+              strIngredient9,
+              strIngredient10,
             ]
 
             const newCocktail = {
@@ -64,34 +72,62 @@ function SingleCocktail() {
   };
 
   if(!cocktail) {
-    return <h2>No cocktail to display</h2>
+    return (
+      <div>
+        <h2>No cocktail to display</h2>
+        
+        <Link to = "/">
+        <p>go back</p>
+        </Link>
+      </div>
+    )
+    
   };
 
   const { name, image, info, category, glass, instructions, ingredients } =  cocktail; 
   
   return (
-    <section>
-      <Link to = "/">
-      <p>go back</p>
-      </Link>
+    <section className='cocktail-details'>
+      <div className='container'>
+        <button type="button" className='flex flex-center back-btn'
+        onClick={() => navigate('/cocktail')}>
+        <ArrowLeftIcon  className='text-black material-icons md-32'/>
+        <span className='fontsize-18 fontwidth-6'>Back</span>
+        </button>
+ 
+        <div className='cocktail-details-content grid'>
+          <h2>{name}</h2>
+          <div className='cocktail-details-img'>
+            <img src={image} alt={name}/> 
+          </div>
 
-      <h2>{name}</h2>
-      <div>
-        {/*<img src={image} alt={name}/>*/}
-
-        <div>
-          <p>Name: <span>{name}</span></p>
-          <p>Category: <span>{category}</span></p>
-          <p>Info: <span>{info}</span></p>
-          <p>Glass: <span>{glass}</span></p>
-          <p>Instructions: <br/><span>{instructions}</span></p>
-          <p><span>Ingredients:</span><br/>
-          {ingredients.map((item,index)=>{
-            return item?<li key={index}>{item}</li>:null
-          })}
-          </p>
+          <div className='cocktail-details-info'>
+          
+            <div className='cocktail-details-item'>
+              <span className='fontwidth-6'>Category: </span> 
+              <span>{category}</span>
+            </div>
+            <div className='cocktail-details-item'>
+              <span className='fontwidth-6'>Info: </span> 
+              <span>{info}</span>
+            </div>
+            <div className='cocktail-details-item'>
+              <span className='fontwidth-6'>Glass: </span> 
+              <span>{glass}</span>
+            </div>
+            <div className='cocktail-details-item'>
+              <span className='fontwidth-6'><br/>Instructions: <br/></span> 
+              <span>{instructions}</span>
+            </div>
+            <div className='cocktail-details-item'>
+              <span className='fontwidth-6'><br/>Ingredients: <br/></span> 
+              {ingredients.map((item,index)=>{
+                return item?<li key={index}>{item}</li>:null
+              })}
+            </div>
+            
+          </div>
         </div>
-
       </div>
     </section>
   )

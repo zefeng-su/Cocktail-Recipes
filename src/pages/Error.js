@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom'
 
 function Error() {
   return (
-    <section>
-      <h1>Oops! Page not found.</h1>
+    <div>
+      <h2>Oops! Page not found.</h2>
       <Link to = "/">
       <p>go back</p>
       </Link>
-    </section>    
+    </div>    
   )
 }
 
