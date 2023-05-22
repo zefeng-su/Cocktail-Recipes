@@ -74,27 +74,27 @@ input{
 .text-caps{text-transform: capitalize;}
 .text-italic{font-style: italic;}
 
- .fontwidth-3{font-weight: 300;}
- .fontwidth-4{font-weight: 400;}
- .fontwidth-5{font-weight: 500;}
- .fontwidth-6{font-weight: 600;}
- .fontwidth-7{font-weight: 700;}
- .fontwidth-8{font-weight: 800;}
- .fontwidth-9{font-weight: 900;}
+.fontwidth-3{font-weight: 300;}
+.fontwidth-4{font-weight: 400;}
+.fontwidth-5{font-weight: 500;}
+.fontwidth-6{font-weight: 600;}
+.fontwidth-7{font-weight: 700;}
+.fontwidth-8{font-weight: 800;}
+.fontwidth-9{font-weight: 900;}
 
- .fontsize-15{font-size: 1.5rem;}
- .fontsize-16{font-size: 1.6rem;}
- .fontsize-17{font-size: 1.7rem;}
- .fontsize-18{font-size: 1.8rem;}
- .fontsize-20{font-size: 2.0rem;}
- .fontsize-22{font-size: 2.2rem;}
- .fontsize-24{font-size: 2.4rem;}
- .fontsize-26{font-size: 2.6rem;}
+.fontsize-15{font-size: 1.5rem;}
+.fontsize-16{font-size: 1.6rem;}
+.fontsize-17{font-size: 1.7rem;}
+.fontsize-18{font-size: 1.8rem;}
+.fontsize-20{font-size: 2.0rem;}
+.fontsize-22{font-size: 2.2rem;}
+.fontsize-24{font-size: 2.4rem;}
+.fontsize-26{font-size: 2.6rem;}
 
- .ls-1{letter-spacing: 1px;}
- .ls-2{letter-spacing: 2px;}
+.ls-1{letter-spacing: 1px;}
+.ls-2{letter-spacing: 2px;}
 
- .flex{
+.flex{
     display: flex;
     align-items: center;
 }

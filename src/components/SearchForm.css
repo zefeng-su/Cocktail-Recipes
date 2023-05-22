@@ -1,0 +1,15 @@
+.material-icons.md-24 { font-size: 24px; }
+
+.search-form{
+    width: 100%;
+    max-width: 680px;
+}
+
+.search-form-element {
+    padding: 1.4rem 2.8rem;
+    border-radius: 1rem;
+}
+
+.search-form-element .form-ctrl::placeholder {
+    opacity: 0.7;
+}
