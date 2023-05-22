@@ -1,7 +1,6 @@
 import React from 'react'
 import SearchForm from '../components/SearchForm'
 import './Header.css'
-import CocktailList from './CocktailList'
 
 function Header() {
   return (
@@ -14,10 +13,6 @@ function Header() {
             <SearchForm type="text" placeholder="Search for a Cocktail..."/>
           </div>
       </header>
-
-      <main>
-        <CocktailList/>
-      </main>
 
     </div>
   )
