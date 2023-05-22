@@ -1,12 +1,16 @@
 import React, {useState, useEffect} from 'react'
 import Loader from '../components/Loader'
-import {useParams, Link} from 'react-router-dom'
+import {useParams, Link, useNavigate} from 'react-router-dom'
+import './SingleCocktail.css'
+import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+
 const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
 function SingleCocktail() {
   const {id} = useParams();
   const [loading, setLoading] = useState(false);
   const [cocktail, setCocktail] = useState(null);
+  const navigate = useNavigate();
 
   useEffect (() => {
     setLoading(true);

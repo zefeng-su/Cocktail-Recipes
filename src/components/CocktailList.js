@@ -1,6 +1,7 @@
 import React from 'react'
 import CocktailDetails from './CocktailDetails'
 import Loader from './Loader';
+import "./CocktailList.css"
 import { useGlobalContext } from '../context/apiContext'
 
 function CocktailList() {
@@ -11,18 +12,22 @@ function CocktailList() {
   };
 
   if(cocktail.length < 1) {
-    return <h2>No matches found</h2>
+    return <h2 className='text-uppercase'>no matches found</h2>
   };
 
   return (
-    <section className='section'>
-      <h2 className='section-title'>
-        YOUR SEARCH RESULTS
-      </h2>
-      <div className='cocktails-center'>
-        {cocktail.map((item) => {
-          return <CocktailDetails key={item.id} {...item}/>
-        })}
+    <section className='cocktail-list'>
+      <div className='container'>
+        <div className='section-title'>
+          <h2 className='text-uppercase'>
+            your search results
+          </h2>
+          <div className='cocktail-content grid'>
+            {cocktail.map((item) => {
+              return <CocktailDetails key={item.id} {...item}/>
+            })}
+          </div>
+        </div>
       </div>
     </section>
   )

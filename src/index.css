@@ -7,7 +7,7 @@
     --white: #ffff;
     --black: #010101;
     --darkGrey:#717171; 
-    --transition: all 300ms ease-in-out;
+    --transition: all 100ms ease-in-out;
 }
  
 *{
@@ -82,6 +82,7 @@ input{
 .fontwidth-8{font-weight: 800;}
 .fontwidth-9{font-weight: 900;}
 
+.fontsize-12{font-size: 1.2rem;}
 .fontsize-15{font-size: 1.5rem;}
 .fontsize-16{font-size: 1.6rem;}
 .fontsize-17{font-size: 1.7rem;}
