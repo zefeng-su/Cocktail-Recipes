@@ -2,36 +2,35 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import "./Navbar.css"
 import logo from '../images/logo.png'
-import MenuIcon from '@mui/icons-material/Menu';
+import InfoIcon from '@mui/icons-material/Info';
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 
 function Navbar() {
-  const [toggleMenu, setToggleMenu] = useState(false);
-  const navbarHandler = () => {
-    setToggleMenu(!toggleMenu);
-  }
-
+ 
   return (
     <nav className="navbar" id="navbar">
       <div className="container navbar-content flex">
         <div className="brand flex flex-space-between">
+          
           <Link to = "/" className="navbar-brand flex">
             <img src={logo} style={{ width: '7%' }} alt="site-logo" />
-            <span className="fontwidth-2 fontsize-24 ls-1">cocktail recipes</span>
+            <span className="fontwidth-2 fontsize-24 ls-1">cocktail recipes</span>  
           </Link>
-          <button type="button" className="navbar-btn" onClick= {navbarHandler}>
-            <MenuIcon className="material-icons md-28" style={{
-              color:`${toggleMenu ? "#ffff" : "#010101"}`
-            }} />
+
+          <button type="button" className="navbar-fav-btn">
+            <BookmarkBorderIcon className="material-icons md-36"/>
           </button>
+
         </div>
     
-        <div className={toggleMenu ? "navbar-collapse show-navbar-collapse": "navbar-collapse"}>
-          <ul className="navbar-nav">   
-            <li className='nav-item'>
-              <Link to ="about" className="nav-link text-uppercase text-white fontsize-22 fontwidth-6 ls-1">About</Link>
-            </li>    
-          </ul>
+        <div>
+          <Link to ="about" >
+            <button type="button" className="navbar-about-btn">
+              <InfoIcon className="material-icons md-36"/>
+            </button>
+          </Link>        
         </div>
+
       </div>
     </nav>
   )

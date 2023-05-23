@@ -3,6 +3,7 @@ import Loader from '../components/Loader'
 import {useParams, Link, useNavigate} from 'react-router-dom'
 import './SingleCocktail.css'
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
@@ -94,9 +95,12 @@ function SingleCocktail() {
         <ArrowLeftIcon  className='text-black material-icons md-32'/>
         <span className='fontsize-18 fontwidth-6'>Back</span>
         </button>
+
+     
  
         <div className='cocktail-details-content grid'>
           <h2>{name}</h2>
+        
           <div className='cocktail-details-img'>
             <img src={image} alt={name}/> 
           </div>
@@ -125,6 +129,11 @@ function SingleCocktail() {
                 return item?<li key={index}>{item}</li>:null
               })}
             </div>
+            <div>
+              <button type="button" className='fav-btn'>
+              <FavoriteIcon  className='text-white material-icons md-12'/>  Add to favorite
+              </button>
+            </div> 
             
           </div>
         </div>
