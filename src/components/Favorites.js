@@ -33,7 +33,7 @@ function Favorites(props) {
               <h3>{drink.name}</h3>
             </div>
  
-            <button className="btn remove-btn">
+            <button className="remove-btn">
               <DeleteOutlineIcon className='material-icons.md-28'/>    
             </button>   
           </div>
