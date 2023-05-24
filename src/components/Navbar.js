@@ -1,14 +1,19 @@
-import React, {useState} from 'react'
+import React  from 'react'
 import { Link } from 'react-router-dom'
 import "./Navbar.css"
 import logo from '../images/logo.png'
 import InfoIcon from '@mui/icons-material/Info';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
-
-function Navbar() {
  
+
+function Navbar(props) {
+
+  const { favVisibility, setfavVisibility } = props;
+
   return (
+    
     <nav className="navbar" id="navbar">
+
       <div className="container navbar-content flex">
         <div className="brand flex flex-space-between">
           
@@ -17,8 +22,8 @@ function Navbar() {
             <span className="fontwidth-2 fontsize-24 ls-1">cocktail recipes</span>  
           </Link>
 
-          <button type="button" className="navbar-fav-btn">
-            <BookmarkBorderIcon className="material-icons md-36"/>
+          <button type="button" className="navbar-fav-btn" onClick={()=> setfavVisibility(!favVisibility)}>
+            <BookmarkBorderIcon className="material-icons md"/>
           </button>
 
         </div>
@@ -26,7 +31,7 @@ function Navbar() {
         <div>
           <Link to ="about" >
             <button type="button" className="navbar-about-btn">
-              <InfoIcon className="material-icons md-36"/>
+              <InfoIcon className="material-icons md"/>
             </button>
           </Link>        
         </div>

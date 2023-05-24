@@ -89,6 +89,7 @@ function SingleCocktail() {
   
   return (
     <section className='cocktail-details'>
+
       <div className='container'>
         <button type="button" className='flex flex-center back-btn'
         onClick={() => navigate('/cocktail')}>
@@ -96,8 +97,6 @@ function SingleCocktail() {
         <span className='fontsize-18 fontwidth-6'>Back</span>
         </button>
 
-     
- 
         <div className='cocktail-details-content grid'>
           <h2>{name}</h2>
         
