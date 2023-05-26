@@ -17,7 +17,7 @@
 }
 
 .navbar-fav-btn{
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 .nav-item{
@@ -28,5 +28,20 @@
     font-size: 28px; 
 }
  
+.counter {
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: var(--orange);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 12px;
+    margin-left: -2.0rem;
+    margin-bottom: 2rem;
+    z-index: 10;
+  }
+  
 
 
