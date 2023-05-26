@@ -3,11 +3,13 @@ import SearchForm from '../components/SearchForm'
 import './Header.css'
 import Navbar from './Navbar'
 import Favorites from '../components/Favorites';
-
-
+ 
+ 
 function Header() {
 
   const [favVisibility, setfavVisibility] = useState(false);  
+ 
+ 
  
   return (
     <div className="holder">
@@ -15,6 +17,7 @@ function Header() {
       <Favorites 
         visibility={favVisibility} 
         onClose={() =>setfavVisibility(false)}
+         
       />
       
       <header className="header">

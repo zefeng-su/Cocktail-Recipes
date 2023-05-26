@@ -3,7 +3,7 @@ import Loader from '../components/Loader'
 import {useParams, Link, useNavigate} from 'react-router-dom'
 import './SingleCocktail.css'
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+ 
 
 const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
@@ -12,7 +12,8 @@ function SingleCocktail() {
   const [loading, setLoading] = useState(false);
   const [cocktail, setCocktail] = useState(null);
   const navigate = useNavigate();
-
+ 
+ 
   useEffect (() => {
     setLoading(true);
     const getCocktail = async() => {
@@ -128,12 +129,7 @@ function SingleCocktail() {
                 return item?<li key={index}>{item}</li>:null
               })}
             </div>
-            <div>
-              <button type="button" className='fav-btn'>
-              <FavoriteIcon  className='text-white material-icons md-12'/>  Add to favorite
-              </button>
-            </div> 
-            
+             
           </div>
         </div>
       </div>

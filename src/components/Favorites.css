@@ -64,6 +64,11 @@
 .cart-products img {
 	width: 100px;
 	background-color: #fff;
+	cursor: pointer;
+}
+
+.cart-products img:hover {
+	opacity: 0.8;  
 }
 
 .remove-btn{
