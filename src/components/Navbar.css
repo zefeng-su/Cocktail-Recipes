@@ -26,6 +26,8 @@
 
 .material-icons.md { 
     font-size: 28px; 
+    text-decoration: none;
+    color: var(--black)
 }
  
 .counter {
@@ -43,5 +45,6 @@
     z-index: 8;
   }
   
+ 
 
 
