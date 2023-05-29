@@ -1,15 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+ 
 
 function Error() {
+ 
   return (
-    <div>
-      <h2>Oops! Page not found.</h2>
-      <Link to = "/">
-      <p>go back</p>
-      </Link>
-    </div>    
+    <section className='about-details'>
+      <div className='container'>
+        <div className='section-title'>
+          <h2 className='text-uppercase'>Oops! Page not found</h2>
+        </div>   
+      </div> 
+    </section>
+    
   )
 }
+
+
+
 
 export default Error

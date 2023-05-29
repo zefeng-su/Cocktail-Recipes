@@ -1,12 +1,28 @@
 import React from 'react'
+import './About.css'
+import gitLogo from '../images/GitHub_Logo_White.png'
+import gitMark from '../images/github-mark-white.png'
+import { Link } from 'react-router-dom'
 
 function About() {
   return (
-    <section>
-      <h1>About Us</h1>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis vulputate faucibus. Etiam bibendum diam nec eleifend euismod. Suspendisse accumsan neque quis lacus elementum ullamcorper. Fusce tempus est lectus, nec luctus nisi viverra ac. Ut sollicitudin elit ac ligula dignissim, non commodo purus pellentesque. Nullam diam velit, venenatis id nibh eu, luctus consectetur mauris. Sed nec nisi a est malesuada fringilla ut id ligula. Fusce sollicitudin odio metus, ac posuere nibh finibus sed. In lobortis ipsum non velit cursus, ut tincidunt mauris semper. Ut orci lorem, ullamcorper et justo at, fringilla ullamcorper eros. Phasellus tincidunt laoreet augue sit amet tempor.
-      </p>
+    <section className='about-details'>
+      <div className='container'>
+        <div className='section-title'> 
+          <h2 className='text-uppercase'>About</h2>
+          <p>This site is created using React.js and Material-UI.</p> 
+          <p>Cocktail data provided by <span className='fontwidth-6'><a href='https://www.thecocktaildb.com/api.php'>TheCocktailDB</a></span></p> 
+        </div> <br/>
+        <p>Find us at:</p> 
+          <div>
+            <Link to={`https://github.com/zefeng-su/`}>
+              <button type="button" className='git-item-btn'>
+                <img src={gitMark} alt="GitHub_Mark_White" width="20" height="20"/>
+                <img src={gitLogo} alt="GitHub_Logo_White" width="20" height="20"/>
+              </button>
+            </Link>
+          </div>
+      </div>  
     </section>
   )
 }

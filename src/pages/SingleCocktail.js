@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import Loader from '../components/Loader'
-import {useParams, Link, useNavigate} from 'react-router-dom'
+import {useParams,  useNavigate} from 'react-router-dom'
 import './SingleCocktail.css'
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
- 
+import missing from '../images/missing.png'
 
 const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
@@ -75,15 +75,15 @@ function SingleCocktail() {
 
   if(!cocktail) {
     return (
-      <div>
-        <h2>No cocktail to display</h2>
-        
-        <Link to = "/">
-        <p>go back</p>
-        </Link>
-      </div>
-    )
-    
+      <section className='about-details'>
+        <div className='container'>
+          <div className='section-title'> 
+            <h2 className='text-uppercase'>No cocktail to display</h2>
+            <img className='missing' src={missing} alt="missing-img" />
+          </div>
+        </div>
+      </section>
+    ) 
   };
 
   const { name, image, info, category, glass, instructions, ingredients } =  cocktail; 

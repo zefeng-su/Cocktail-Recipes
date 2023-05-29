@@ -1,0 +1,25 @@
+a:hover {
+    color: var(--orange)
+}
+
+.about-details{
+    padding: 3rem 0;
+}
+
+.git-item-btn {
+    background-color: var(--black);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.git-item-btn:hover {
+    background-color: var(--darkGrey);
+}
+
+ 
