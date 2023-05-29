@@ -14,14 +14,14 @@ function About() {
           <p>Cocktail data provided by <span className='fontwidth-6'><a href='https://www.thecocktaildb.com/api.php'>TheCocktailDB</a></span></p> 
         </div> <br/>
         <p>Find us at:</p> 
-          <div>
+          
             <Link to={`https://github.com/zefeng-su/`}>
               <button type="button" className='git-item-btn'>
                 <img src={gitMark} alt="GitHub_Mark_White" width="20" height="20"/>
                 <img src={gitLogo} alt="GitHub_Logo_White" width="20" height="20"/>
               </button>
             </Link>
-          </div>
+           
       </div>  
     </section>
   )
