@@ -17,8 +17,8 @@ function About() {
           
             <Link to={`https://github.com/zefeng-su/`}>
               <button type="button" className='git-item-btn'>
-                <img src={gitMark} alt="GitHub_Mark_White" width="20" height="20"/>
-                <img src={gitLogo} alt="GitHub_Logo_White" width="20" height="20"/>
+                <img className='git-mark' src={gitMark} alt="GitHub_Mark_White"  />
+                <img className='git-logo' src={gitLogo} alt="GitHub_Logo_White"  />
               </button>
             </Link>
            

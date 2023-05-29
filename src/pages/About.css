@@ -22,4 +22,12 @@ a:hover {
     background-color: var(--darkGrey);
 }
 
- 
+ .git-mark {
+    width: 2rem;
+    height: auto;
+ }
+
+ .git-logo {
+    width: 5rem;
+    height: auto;
+ }
