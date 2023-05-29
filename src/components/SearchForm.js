@@ -7,11 +7,12 @@ import { useNavigate } from 'react-router-dom';
 
 function SearchForm(props) {
 
-  const{type, placeholder} = props
-  const{setSearchTerm} = useGlobalContext();
-  const searchValue = useRef('');
+  const{type, placeholder} = props //Destructuring the props object  
+  const{setSearchTerm} = useGlobalContext(); // Accessing setSearchTerm from apiContext.js
+  const searchValue = useRef('');   // Creating a reference to the search input field
   const navigate = useNavigate();
 
+  // Instructing the browser to give input focus to search field, allowing the user to type into input field immediately when searchForm is mounted.
   useEffect(()=> {
     searchValue.current.focus()
   }, []);
@@ -19,7 +20,7 @@ function SearchForm(props) {
  
   const handlerSubmit = (event) => {
     event.preventDefault();
-    setSearchTerm(searchValue.current.value)
+    setSearchTerm(searchValue.current.value) // Setting the search term in the global context
     navigate('/cocktail')
   };
 
@@ -47,4 +48,4 @@ function SearchForm(props) {
   )
 }
 
-export default SearchForm
+export default SearchForm;

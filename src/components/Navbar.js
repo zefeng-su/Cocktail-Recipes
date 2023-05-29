@@ -8,8 +8,8 @@ import { useFavAppContext } from '../context/favContext';
 
 function Navbar(props) {
 
-  const { favVisibility, setfavVisibility } = props;
-  const { favorites } = useFavAppContext();
+  const { favVisibility, setfavVisibility } = props; // Destructuring the props object to get the 'favVisibility' and 'setfavVisibility' variables
+  const { favorites } = useFavAppContext(); // Using the useFavAppContext hook to access the 'favorites' variable from the favContext.js
 
   return (
     
@@ -24,9 +24,11 @@ function Navbar(props) {
         </div>
        
         <div className="flex">
-          <button type="button" className="navbar-fav-btn" onClick={()=> setfavVisibility(!favVisibility)}>
+          {/* Button to toggle the visibility of favorites */}
+          <button type="button" className="navbar-fav-btn" onClick={()=> setfavVisibility(!favVisibility)}> 
             <BookmarkBorderIcon className="material-icons md"/>
           </button>
+          {/* Displaying the count of items added to favorites based on array length*/}
           {favorites.length > 0 && (<span className="counter">{favorites.length}</span>)}
         </div>
         
@@ -43,4 +45,4 @@ function Navbar(props) {
   )
 }
 
-export default Navbar
+export default Navbar;

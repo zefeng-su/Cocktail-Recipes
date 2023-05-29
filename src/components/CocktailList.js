@@ -6,12 +6,15 @@ import { useGlobalContext } from '../context/apiContext'
 import missing from '../images/missing.png'
 
 function CocktailList() {
+  // Destructuring the cocktail and loading states from the apiContext.js
   const {cocktail, loading} = useGlobalContext();
 
+  // If loading is true, render the Loader component
   if(loading) {
     return <Loader/>
   };
 
+  // If the length of the cocktail array is less than 1, render the "no matches found" section
   if(cocktail.length < 1) {
     return (
       <section className='cocktail-list'>
@@ -25,6 +28,7 @@ function CocktailList() {
     )
   };
 
+  // Render the "your search results" section with the cocktail details
   return (
     <section className='cocktail-list'>
       <div className='container'>
@@ -33,8 +37,9 @@ function CocktailList() {
             your search results
           </h2>
           <div className='cocktail-content grid'>
+            {/* Map through each item in the cocktail array and render the CocktailDetails component */}
             {cocktail.map((item) => {
-              return <CocktailDetails key={item.id} {...item}/>
+              return <CocktailDetails key={item.id} {...item}/> 
             })}
           </div>
         </div>
@@ -43,4 +48,4 @@ function CocktailList() {
   )
 }
 
-export default CocktailList
+export default CocktailList;
