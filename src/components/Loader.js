@@ -1,5 +1,6 @@
 import React from 'react'
 import loader from '../images/loader.svg'
+ 
 import './Loader.css'
 
 function Loader() {
