@@ -28,7 +28,9 @@ Cocktail Recipes is a single-page application for users to look up their favorit
 - As a user, I should be able to add more than one recipe to the favorites list.
 - As a user, I should be able to delete unwanted recipes from the favorites list.
 
-
+### Possible future enhancements
+- Sign in with Google/Facebook
+ 
 ## Live Site
 https://seif13p2-cocktail-recipes.vercel.app
 
@@ -38,9 +40,6 @@ The source code is available on GitHub: https://github.com/zefeng-su/seif-13-pro
 ## API used
 https://www.thecocktaildb.com/api.php
 
-## Possible future enhancements
-- Sign in with Google/Facebook
- 
 ## Authors
 SU ZEFENG - https://github.com/zefeng-su/
 
