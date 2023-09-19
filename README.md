@@ -35,7 +35,7 @@ Cocktail Recipes is a single-page application for users to look up their favorit
 https://seif13p2-cocktail-recipes.vercel.app
 
 ## Repository
-The source code is available on GitHub: https://github.com/zefeng-su/seif-13-project2
+The source code is available on GitHub: https://github.com/zefeng-su/Cocktail-Recipes
 
 ## API used
 https://www.thecocktaildb.com/api.php
