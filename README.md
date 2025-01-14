@@ -1,6 +1,9 @@
 # Cocktail Recipes
 Cocktail Recipes is a single-page application for users to look up their favorite cocktail recipes and save them in a favorites list for quick access.
 
+## Live Site
+https://seif13p2-cocktail-recipes.vercel.app
+
 ## About
 
 ### Technologies
@@ -30,9 +33,6 @@ Cocktail Recipes is a single-page application for users to look up their favorit
 
 ### Possible future enhancements
 - Sign in with Google/Facebook
- 
-## Live Site
-https://seif13p2-cocktail-recipes.vercel.app
 
 ## Repository
 The source code is available on GitHub: https://github.com/zefeng-su/Cocktail-Recipes
